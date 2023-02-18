@@ -19,6 +19,11 @@ public class User{
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JoinColumn
     private List<Blog> blogList;
+
+    public User() {
+
+    }
+
     public User(String username, String password) {
         this.username = username;
         this.password = password;
